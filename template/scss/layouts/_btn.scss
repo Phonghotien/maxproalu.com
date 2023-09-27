@@ -1,0 +1,118 @@
+.btn {
+  @include mid-flex;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  padding: 1.6rem;
+  font-weight: 600;
+  @include transition(0.5s, ease);
+  overflow: hidden;
+  position: relative;
+  background: $color-pri;
+  gap: 1rem;
+  color: white;
+  font-size: 1.6rem;
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  .text {
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $color-text;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  @include hover {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+.btn-second {
+  @include flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: $color-pri;
+  padding: 0.4rem 0;
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.1rem;
+    bottom: 0;
+    right: 0;
+    background: $color-pri;
+    transition: all 0.3s ease;
+  }
+  @include hover {
+    &::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+  .text {
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+  }
+  .icon {
+    width: 2rem;
+    @include mid-flex;
+    flex-shrink: 0;
+  }
+}
+.btn-three {
+  padding: 1rem 2rem;
+  position: relative;
+  @include mid-flex;
+  font-weight: 600;
+  width: fit-content;
+  border: 0.1rem solid $color-pri;
+  transition: 0.3s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 0.1rem solid $color-pri;
+    border-bottom: unset;
+    border-right: unset;
+    top: 100%;
+    left: 100%;
+    transition: 0.3s ease-in-out;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 0.1rem solid $color-pri;
+    border-top: unset;
+    border-left: unset;
+    bottom: 100%;
+    right: 100%;
+    transition: 0.3s ease-in-out;
+  }
+  @include hover {
+    color: $color-pri;
+    border-color: #cbcccd;
+    &::before,
+    &::after {
+      border-color: #cbcccd;
+    }
+  }
+}
+.btn-center {
+  margin: 0 auto;
+}

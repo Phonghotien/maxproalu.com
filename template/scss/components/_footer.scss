@@ -1,0 +1,162 @@
+.footer {
+  &-py {
+    padding: 8rem 0;
+    background: #403d3d;
+  }
+  &-row {
+    justify-content: space-between;
+    @include max(1200px) {
+      row-gap: 2.4rem;
+    }
+    .col {
+      @include max(1200px) {
+        width: 100%;
+      }
+    }
+  }
+  &-logo {
+    @include flex;
+    flex-direction: column;
+    gap: 3rem;
+    @include max(1200px) {
+      align-items: center;
+      text-align: center;
+      gap: 1.6rem;
+    }
+    .custom-logo-link {
+      width: 16rem;
+      @include flex;
+      img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  &-info {
+    @include flex;
+    flex-direction: column;
+    gap: 3rem;
+    @include max(1200px) {
+      align-items: center;
+      text-align: center;
+      gap: 1.6rem;
+    }
+    &-list {
+      @include flex;
+      gap: 0.6rem;
+      .link {
+        width: 3.2rem;
+        height: 3.2rem;
+        @include mid-flex;
+      }
+    }
+  }
+  &-sc {
+    &-list {
+      @include flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    &-item {
+      @include flex;
+      gap: 1rem;
+      .icon {
+        margin-top: 0.4rem;
+        @include mid-flex;
+        flex-shrink: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+      .igr {
+        @include flex;
+        flex-direction: column;
+        .t-link {
+          color: #fff;
+          transition: 0.3s ease-in-out;
+          @include hover {
+            color: $color-pri;
+          }
+        }
+      }
+    }
+  }
+  .menu-list {
+    .menu-item {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &.current-page-item {
+        .menu-link {
+          color: #ff4f56;
+          font-weight: 600;
+        }
+      }
+      .menu-link {
+        font-size: 1.4rem;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+        @include hover {
+          color: #ff4f56;
+        }
+      }
+    }
+  }
+  &-ctn {
+    @include flex;
+    justify-content: space-between;
+    margin: 0 -1.2rem;
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+  }
+  &-sc {
+    width: calc((3 / 8) * 100%);
+    padding: 0 1.2rem;
+    @include max(630px) {
+      width: 100%;
+      order: 2;
+    }
+  }
+  &-ctrs {
+    width: calc((4 / 8) * 100%);
+    padding: 0 1.2rem;
+    @include max(768px) {
+      width: calc((4.5 / 8) * 100%);
+    }
+    @include max(630px) {
+      width: 100%;
+    }
+  }
+  &-ctr {
+    @include flex;
+    margin: 0 -1.2rem;
+    justify-content: space-between;
+  }
+  &-nav {
+    padding: 0 1.2rem;
+    width: 50%;
+    @include max(768px) {
+      width: 35%;
+    }
+  }
+  &-sp {
+    width: 50%;
+    padding: 0 1.2rem;
+    @include max(768px) {
+      width: 65%;
+    }
+  }
+  &-sign {
+    @include mid-flex;
+    gap: 0.6rem;
+    padding: 1.2rem 1.5rem;
+    background: #fff;
+    .icon {
+      @include mid-flex;
+      width: 18rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
