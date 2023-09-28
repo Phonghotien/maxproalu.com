@@ -1,0 +1,48 @@
+.breadcrumb {
+    padding: 1.2rem 0;
+
+    &-list {
+        @include flex;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        gap: .8rem;
+        --color: #757575;
+        --color-active: #BE252B;
+    }
+
+    &-item {
+        color: var(--color);
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+
+        &:not(:first-child) {
+            &::before {
+                display: inline-block;
+                content: '';
+                width: 1.2rem;
+                height: .1rem;
+                border-radius: 100rem;
+                background-color: var(--color);
+                vertical-align: middle;
+            }
+        }
+
+        &:last-child {
+            color: var(--color-active);
+            pointer-events: none;
+            font-weight: 700;
+        }
+
+        @include hover {
+            color: $color-second;
+        }
+    }
+
+    &-link {
+        color: inherit;
+        transition: .2s ease-in-out;
+    }
+}
