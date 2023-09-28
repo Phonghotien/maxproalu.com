@@ -1,4 +1,7 @@
 .bnh {
+  &-slider {
+    position: relative;
+  }
   &-image {
     .inner {
       @include imgPd(780, 1728);
@@ -17,17 +20,30 @@
     background: rgba(145, 145, 145, 0.6);
     backdrop-filter: blur(0.8rem);
     -webkit-backdrop-filter: blur(0.8rem);
-  }
-  &-sw {
+    width: 57rem;
+    @include max(1300px) {
+      padding: 2rem;
+      padding-left: 10rem;
+      width: 40%;
+    }
+    @include max(1200px) {
+      padding: 1.5rem;
+    }
+    @include max(768px) {
+      position: relative;
+      width: 100%;
+      bottom: unset;
+      left: unset;
+      padding: 1.6rem 1.5rem;
+      backdrop-filter: unset;
+    }
     .swiper-pagination-bullet {
       &.swiper-pagination-bullet-active {
         .pagi-pro {
           height: 6rem;
-          @include max(560px) {
-            height: 2.4rem;
-          }
-          &::after {
-            animation: pro 4s linear forwards;
+          @include max(768px) {
+            height: 0.2rem;
+            width: 6rem;
           }
         }
         .pagi-num {
@@ -35,46 +51,89 @@
         }
       }
     }
+    .swiper {
+      .swiper-slide {
+        &.swiper-slide-thumb-active {
+          .bnh-ctn-gr .t-link {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+          .bnh-btn {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+      }
+    }
   }
-  //   &-ctn {
-  //     position: absolute;
-  //     padding: 5rem;
-  //     padding-left: 10rem;
-  //     bottom: 5%;
-  //     left: 2.5%;
-  //     z-index: 2;
-  //     background: rgba(145, 145, 145, 0.6);
-  //     backdrop-filter: blur(0.8rem);
-  //     -webkit-backdrop-filter: blur(0.8rem);
-  //     width: 57rem;
-  //     &-gr {
-  //       @include flex;
-  //       flex-direction: column;
-  //       gap: 3rem;
-  //       .t-link {
-  //         @include fz-40;
-  //         font-weight: 700;
-  //         color: #fff;
-  //         transition: 0.3s ease-in-out;
-  //         @include hover {
-  //           color: $color-pri;
-  //         }
-  //       }
-  //     }
-  //   }
-
+  &-sw {
+  }
+  &-ctn {
+    &-gr {
+      @include flex;
+      flex-direction: column;
+      gap: 3rem;
+      @include max(768px) {
+        gap: 1.2rem;
+      }
+      .t-link {
+        @include fz-40;
+        font-weight: 700;
+        color: #fff;
+        transition: 0.1s ease-in-out;
+        transition-timing-function: ease;
+        transition-duration: 1.2s;
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        transition-property: color, opacity, transform, -webkit-transform;
+        @include max(1300px) {
+          font-size: 3rem;
+        }
+        @include max(1200px) {
+          font-size: 3vw;
+        }
+        @include hover {
+          color: $color-pri;
+        }
+      }
+    }
+  }
+  &-btn {
+    opacity: 0;
+    transition-timing-function: ease;
+    transition-duration: 1.2s;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+  }
   &-pagination {
     @include mid-flex;
     flex-direction: column;
     position: absolute;
     width: fit-content !important;
-    bottom: 6% !important;
-    left: 5% !important;
+    top: 50% !important;
+    left: 5rem !important;
     transform: translate(-50%, -50%);
     z-index: 2;
-    min-height: 26.8rem;
+    bottom: unset !important;
     border-radius: unset !important;
     background: unset !important;
+    @include max(1200px) {
+      left: 2rem !important;
+    }
+    @include max(768px) {
+      top: unset !important;
+      bottom: 100% !important;
+      transform: unset !important;
+      flex-direction: row;
+      gap: 0.6rem;
+      left: 1.5rem !important;
+    }
     .swiper-pagination-bullet {
       width: unset;
       height: unset;
@@ -85,6 +144,10 @@
       align-items: center;
       flex-direction: column;
       margin: 0 !important;
+      @include max(768px) {
+        gap: 0.6rem;
+        flex-direction: row;
+      }
       .pagi-num {
         font-weight: 600;
         transition: 0.4s;
@@ -97,18 +160,87 @@
         position: relative;
         transition: 0.4s;
         margin: 1rem 0;
-        @include max(560px) {
-          margin: 0;
+        @include max(768px) {
+          width: 0;
+          height: 0.2rem;
         }
-        &::after {
-          content: "";
-          height: 50%;
-          background-color: $color-second;
-          width: 100%;
-          top: 0;
-          position: absolute;
-          z-index: 3;
-        }
+      }
+    }
+  }
+  &-item {
+    position: relative;
+  }
+  &-dots {
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100rem;
+    @include mid-flex;
+    color: #fff;
+    background: $color-pri;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    @include hover {
+      .bnh-dots-tag {
+        opacity: 1;
+        visibility: unset;
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #be252b;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      transform-origin: center center;
+      animation: pulse-me 3s linear infinite;
+      z-index: -1;
+      opacity: 0;
+    }
+    &::after {
+      animation-delay: 2s;
+    }
+    &.x1 {
+      top: 60%;
+      right: 24%;
+    }
+    &.x2 {
+      top: 65%;
+      left: 50%;
+    }
+    &.x3 {
+      top: 20%;
+      left: 34%;
+    }
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      @include mid-flex;
+    }
+    &-tag {
+      position: absolute;
+      left: calc(100% + 2rem);
+      top: 100%;
+      width: max-content;
+      opacity: 0;
+      transition: 0.3s ease-in;
+      visibility: hidden;
+      @include max(1200px) {
+        visibility: visible;
+        opacity: 1;
+      }
+      .text {
+        padding: 1.6rem;
+        background: #fff;
+        color: $color-pri;
+        font-weight: 600;
       }
     }
   }
