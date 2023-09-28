@@ -59,7 +59,21 @@
   }
   &-lang {
     height: 100%;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
     @include max(1200px) {
+      display: none;
+    }
+    &-pos {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $color-second;
+      width: 100%;
+      padding: 0.2rem 0;
       display: none;
     }
     &-gr {
@@ -67,6 +81,7 @@
       align-items: center;
       gap: 0.4rem;
       height: 100%;
+      padding: 0 1.2rem;
       .icon-flag {
         width: 2.2rem;
         height: 2.2rem;
