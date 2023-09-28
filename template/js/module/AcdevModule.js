@@ -112,4 +112,41 @@ export default function AcdevModule() {
         effect: "slide",
         slidesPerView: "auto",
     }, "progressbar");
+    const anoSteps = document.querySelectorAll('.ano-step-item');
+    if (anoSteps) {
+        var anoSliders = new Swiper(".ano-slider .swiper", {
+            watchSlidesProgress: true,
+            pagination: {
+                el: ".ano-slider .swiper-pagination",
+                type: "bullets",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".ano-slider .swiper-next",
+                prevEl: ".ano-slider .swiper-prev",
+            },
+            fadeEffect: {
+                crossFade: true,
+            },
+            slidesPerView: "auto",
+            on: {
+                init: function (e) {
+                    $('.ano-step-item.active').removeClass('active');
+                    anoSteps[e.realIndex].classList.add('active')
+                },
+                slideChange: function (e) {
+                    $('.ano-step-item.active').removeClass('active');
+                    anoSteps[e.realIndex].classList.add('active')
+                }
+            }
+        });
+        anoSteps.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                $('.ano-step-item.active').removeClass('active');
+                item.classList.add('active')
+                anoSliders.slideTo(index)
+            })
+        })
+    }
+
 }
