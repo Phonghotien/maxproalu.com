@@ -175,4 +175,23 @@ export default function SwiperModule() {
       // itemMain.controller.control = itemText;
     });
   }
+
+  let slideCurrent = document.querySelector('.swiper-gen .pagin-current');
+  functionSlider(".swiper-gen",  {
+    speed: 1200,
+    autoplay: true,
+    // slidesPerGroup: 2,
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    spaceBetween: 0,
+    slidesPerView: "auto",
+
+    on: {
+      slideChange: function (sw) {
+        slideCurrent.innerHTML = (this.activeIndex  < 9 ? `0${this.activeIndex + 1}` : this.activeIndex + 1);
+      }
+  },
+
+  }, 'progressbar')
 }
