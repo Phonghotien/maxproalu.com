@@ -22,6 +22,7 @@ import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import AcdevModule from "./module/AcdevModule.js";
+import hModule from "./module/hModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -56,5 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
   CollapseModule();
   ComponentModule();
   AcdevModule();
+  // hung toi choi bro
+  hModule();
   ShowPassWord();
 });
