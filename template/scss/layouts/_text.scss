@@ -8,7 +8,33 @@
 .t-title-second {
   @include fz-24;
 }
-
+.pd-sec {
+  padding: 5rem 0;
+  @include max(1200px) {
+    padding: 2.4rem 0;
+  }
+}
+.pb-sec {
+  padding-bottom: 10rem;
+  @include max(1200px) {
+    padding-bottom: 2.4rem;
+  }
+}
+.pt-sec {
+  padding-top: 10rem;
+  @include max(1200px) {
+    padding-top: 6rem;
+  }
+  @include max(768px) {
+    padding-top: 4.8rem;
+  }
+}
+.link-hv {
+  transition: 0.3s ease-in-out;
+  @include hover {
+    color: $color-pri;
+  }
+}
 .t-center {
   text-align: center;
 }

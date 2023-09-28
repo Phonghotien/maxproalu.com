@@ -1,0 +1,115 @@
+.bnh {
+  &-image {
+    .inner {
+      @include imgPd(780, 1728);
+      img {
+        @include imgCover;
+      }
+    }
+  }
+  &-thumb {
+    position: absolute;
+    padding: 5rem;
+    padding-left: 10rem;
+    bottom: 5%;
+    left: 2.5%;
+    z-index: 2;
+    background: rgba(145, 145, 145, 0.6);
+    backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
+  }
+  &-sw {
+    .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+        .pagi-pro {
+          height: 6rem;
+          @include max(560px) {
+            height: 2.4rem;
+          }
+          &::after {
+            animation: pro 4s linear forwards;
+          }
+        }
+        .pagi-num {
+          color: $color-second;
+        }
+      }
+    }
+  }
+  //   &-ctn {
+  //     position: absolute;
+  //     padding: 5rem;
+  //     padding-left: 10rem;
+  //     bottom: 5%;
+  //     left: 2.5%;
+  //     z-index: 2;
+  //     background: rgba(145, 145, 145, 0.6);
+  //     backdrop-filter: blur(0.8rem);
+  //     -webkit-backdrop-filter: blur(0.8rem);
+  //     width: 57rem;
+  //     &-gr {
+  //       @include flex;
+  //       flex-direction: column;
+  //       gap: 3rem;
+  //       .t-link {
+  //         @include fz-40;
+  //         font-weight: 700;
+  //         color: #fff;
+  //         transition: 0.3s ease-in-out;
+  //         @include hover {
+  //           color: $color-pri;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  &-pagination {
+    @include mid-flex;
+    flex-direction: column;
+    position: absolute;
+    width: fit-content !important;
+    bottom: 6% !important;
+    left: 5% !important;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    min-height: 26.8rem;
+    border-radius: unset !important;
+    background: unset !important;
+    .swiper-pagination-bullet {
+      width: unset;
+      height: unset;
+      background-color: transparent;
+      border: none;
+      @include flex;
+      opacity: 1 !important;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 !important;
+      .pagi-num {
+        font-weight: 600;
+        transition: 0.4s;
+        color: white;
+      }
+      .pagi-pro {
+        height: 0rem;
+        width: 0.2rem;
+        background-color: white;
+        position: relative;
+        transition: 0.4s;
+        margin: 1rem 0;
+        @include max(560px) {
+          margin: 0;
+        }
+        &::after {
+          content: "";
+          height: 50%;
+          background-color: $color-second;
+          width: 100%;
+          top: 0;
+          position: absolute;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}

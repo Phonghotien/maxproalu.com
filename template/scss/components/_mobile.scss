@@ -17,9 +17,9 @@
     min-width: initial;
   }
 
-  // &.sticky {
-  //   top: var(--size-hd-sticky);
-  // }
+  &.sticky {
+    top: calc((var(--size-hd)) - (var(--size-hd-top)));
+  }
 
   &.open {
     transform: translateX(0);

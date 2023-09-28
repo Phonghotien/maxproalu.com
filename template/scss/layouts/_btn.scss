@@ -3,7 +3,7 @@
   width: fit-content;
   text-align: center;
   cursor: pointer;
-  padding: 1.6rem;
+  padding: 1rem 1.6rem;
   font-weight: 600;
   @include transition(0.5s, ease);
   overflow: hidden;
@@ -33,6 +33,20 @@
     &::after {
       left: 0;
       width: 100%;
+    }
+  }
+  &.btn_circle {
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: unset;
+    color: $color-pri;
+    background: transparent;
+    border-radius: 100rem;
+    &::after {
+      background: $color-pri;
+    }
+    @include hover {
+      color: #fff;
     }
   }
 }
@@ -78,14 +92,14 @@
   @include mid-flex;
   font-weight: 600;
   width: fit-content;
-  border: 0.1rem solid $color-pri;
+  border: 0.1rem solid #cbcccd;
   transition: 0.3s ease-in-out;
   &::before {
     content: "";
     position: absolute;
     width: 1rem;
     height: 1rem;
-    border: 0.1rem solid $color-pri;
+    border: 0.1rem solid #cbcccd;
     border-bottom: unset;
     border-right: unset;
     top: 100%;
@@ -97,7 +111,7 @@
     position: absolute;
     width: 1rem;
     height: 1rem;
-    border: 0.1rem solid $color-pri;
+    border: 0.1rem solid #cbcccd;
     border-top: unset;
     border-left: unset;
     bottom: 100%;
@@ -106,10 +120,10 @@
   }
   @include hover {
     color: $color-pri;
-    border-color: #cbcccd;
+    border-color: $color-pri;
     &::before,
     &::after {
-      border-color: #cbcccd;
+      border-color: $color-pri;
     }
   }
 }
