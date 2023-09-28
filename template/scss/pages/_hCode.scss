@@ -332,6 +332,7 @@
 
     &-sp {
         &-slider {
+            position: relative;
             .swiper {
                 &-slide {
                     width: calc(100% / 3);
