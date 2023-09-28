@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/backdoor.css">
+    <link rel="icon" type="image/png" href="./assets/images/mona.png" />
+    <title>Công nghệ</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-gr">
+                    <a href="" class="btn">
+                        <span class="text">
+                            Tải tài liệu
+                        </span>
+                        <span class="icon">
+                            <i class="fa-light fa-down-to-bracket"></i>
+                        </span>
+                    </a>
+                    <div class="header-user">
+                        <a href="" class="header-user-link">
+                            <span class="icon">
+                                <i class="fa-light fa-user"></i>
+                            </span>
+                            <span class="t-link">
+                                Đăng nhập/Đăng ký
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header-lang">
+                        <div class="header-lang-gr">
+                            <span class="icon-flag">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </span>
+                            <span class="text">
+                                VN
+                            </span>
+                            <span class="icon">
+                                <img src="./assets/images/arrow_down.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bot">
+            <div class="container">
+                <div class="header-wrap">
+                    <div class="header-burger">
+                        <div class="hamburger" id="hamburger">
+                            <label for="menu_checkbox" class="hamburger-label">
+                                <div class="hamburger-text"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="header-logo">
+                        <a href="" class="custom-logo-link">
+                            <img src="./assets/images/logo-second.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header-nav">
+                        <div class="menu-nav">
+                            <!-- Cấu trúc html menu -->
+                            <ul class="menu-list">
+                                <li class="menu-item current-menu-item">
+                                    <a href="" class="menu-link">
+                                        Giới thiệu
+                                    </a>
+                                </li>
+                                <li class="menu-item dropdown">
+                                    <a href="" class="menu-link">
+                                        Sản phẩm
+                                    </a>
+                                    <ul class="menu-list">
+                                        <li class="menu-item">
+                                            <a href="" class="menu-link">
+                                                Demo
+                                            </a>
+                                        </li>
+                                        <li class="menu-item dropdown">
+                                            <a href="" class="menu-link">
+                                                Demo
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Công nghệ
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Dự án
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Phân phối
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-overlay"></div>
+        <div class="mobile">
+            <div class="mobile-con">
+                <div class="mobile-wr">
+                    <div class="mobile-lang">
+                        <span class="text">Ngôn ngữ</span>
+                        <div class="mobile-lang-list">
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav">
+                        <div class="menu-nav menu-have-icon">
+                            <ul id="menu-menu-header-main-mobile" class="menu-list">
+                                <li class="menu-item parent fz16 fw6 current-menu-item">
+                                    <a class="menu-link" href="">Trang chủ</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6 dropdown">
+                                    <a class="menu-link" href="">Giới thiệu</a>
+                                    <ul class="menu-list">
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 1 </a>
+                                        </li>
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 2
+                                            </a>
+                                        </li>
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Sản phẩm</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Công nghệ</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Dự án</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Tin tức</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Phân phối</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-if">
+                        <div class="mobile-if-list">
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (1).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Địa chỉ: </span>Số 1350/1 Quốc Lộ 1A, phường Thới An, quận
+                                        12, Tp. Hồ Chí Minh
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (3).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Số điện thoại: </span>0946 806 159
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (2).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Email:</span>info@maxproalu.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-mxh">
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (1).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (2).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (3).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (4).svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main page-tech">
+        <section class="sec-re-banner">
+            <div class="re-banner">
+                <div class="re-banner-img">
+                    <img src="./assets/img/banner-congnghe.jpg" alt="">
+                </div>
+                <div class="re-banner-wrapper">
+                    <div class="re-banner-content">
+                        <div class="breadcrumb">
+                            <ul class="breadcrumb-list">
+                                <li class="breadcrumb-item" data-aos="fade-right">
+                                    <a href="" class="breadcrumb-link">
+                                        Trang chủ
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item" data-aos="fade-right">
+                                    <a href="" class="breadcrumb-link">
+                                        Công nghệ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="re-banner-title txt-over">
+                            <span data-aos="fade-right">Công nghệ</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-proce">
+            <div class="proce ss-pd">
+                <div class="proce-head">
+                    <div class="container">
+                        <div class="head">
+                            <h2 class="t-title">
+                                Quy trình sản xuất thanh nhôm Maxpro.JP
+                            </h2>
+                            <p class="des">
+                                Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn
+                                trang
+                                phục vụ cho in ấn. Lorem
+                                Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm
+                                1500,
+                                khi một họa sĩ vô danh ghép
+                                nhiều đoạn văn bản với nhau.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="proce-sec casting">
+                    <div class="container">
+                        <div class="casting-head row">
+                            <div class="left col col-7">
+                                <p class="proce-sec-number">
+                                    01
+                                </p>
+                                <h3 class="t-title">
+                                    Casting - Quy trình đúc
+                                </h3>
+                                <p class="des">
+                                    Phôi nhôm được nung chảy trong lò nung, vừa chày quay khuôn, vừa làm lạnh đột ngột.
+                                    Hình thành nên thanh billet hình trụ
+                                    tròn với chiều dài 6.5m
+                                </p>
+                            </div>
+                            <div class="right col col-4">
+                                <div class="casting-head-img">
+                                    <img src="./assets/img/casting-head-img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="casting-slider">
+                        <div class="swiper-container">
+                            <div class="swiper row">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-1.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Nguyên liệu phôi nhôm được kiểm định nghiêm ngặt
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-1.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Được cho vào lò đun ở nhiệt độ 1100oC thành nhôm nóng chảy
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-2.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Điều chỉnh thành phần hoá học đáp ứng tiêu chuẩn JIS H4100
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-3.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Nhôm được chảy từ lò điều chỉnh hoá chất sang máy đúc
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-4.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Tại máy đúc hình thành các trụ nhôm được gọi là Billet
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide col">
+                                        <div class="casting-wrap">
+                                            <div class="casting-img">
+                                                <img src="./assets/img/casting-img-5.jpg" alt="">
+                                            </div>
+                                            <div class="casting-line"></div>
+                                            <h4 class="casting-name">
+                                                Billet thành phẩm được dùng làm nguyên liệu cho công đoạn đùn ép
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="proce-sec ext ss-pd-t">
+                    <div class="container">
+                        <div class="ext-head">
+                            <div class="left">
+                                <p class="proce-sec-number">
+                                    02
+                                </p>
+                                <h3 class="t-title">
+                                    Extrusion - Quy trình đùn ép
+                                </h3>
+                                <p class="des">
+                                    Billet được cắt theo chiều dài yêu cầu và đùn ép đến độ dài 50-60m. Mỗi dây chuyền
+                                    được trang bị hệ thống robot máy kéo
+                                    dãn 2 đầu nhằm nâng cao tính hiệu quả.
+                                </p>
+                            </div>
+                            <div class="right">
+                                <div class="ext-pagi">
+                                    <div class="ext-pagi-number">
+                                        01
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="ext-pagi-total">
+                                        08
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ext-slider">
+                            <div class="swiper-container">
+                                <div class="swiper row">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-1.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 1
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Thanh Billet được nung nóng ở nhiệt độ 460oC
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-2.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 2
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Cắt khúc và tăng áp bằng máy ép thuỷ lực
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-3.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 3
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Thông qua lỗ được thiết kế trong khuôn Profile
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-4.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 4
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Hệ thống robot kéo tự động hai đầu hiện đại
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-4.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 5
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Hệ thống robot kéo tự động hai đầu hiện đại
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-4.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 6
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Hệ thống robot kéo tự động hai đầu hiện đại
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-4.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 7
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Hệ thống robot kéo tự động hai đầu hiện đại
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide col col-3">
+                                            <div class="ext-wrap">
+                                                <div class="ext-img">
+                                                    <img src="./assets/img/ext-img-4.jpg" alt="">
+                                                </div>
+                                                <div class="ext-content">
+                                                    <div class="ext-ar">
+                                                        <img src="./assets/img/ext-ar.svg" alt="">
+                                                    </div>
+                                                    <div class="inner">
+                                                        <p class="ext-step">
+                                                            Bước 8
+                                                        </p>
+                                                        <p class="ext-name">
+                                                            Hệ thống robot kéo tự động hai đầu hiện đại
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proce-sec ano">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-py">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="footer-row row">
+                        <div class="col col-3">
+                            <div class="footer-info">
+                                <div class="footer-logo">
+                                    <a href="" class="custom-logo-link">
+                                        <img src="./assets/images/logo-ft.png" alt="">
+                                    </a>
+                                    <p class="fw-6 c-white">
+                                        Công ty TNHH XNK Trung Chính
+                                    </p>
+                                </div>
+                                <div class="footer-info-list">
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (1).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (2).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (3).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (4).png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-8">
+                            <div class="footer-block">
+                                <div class="footer-ctn">
+                                    <div class="footer-sc">
+                                        <div class="footer-sc-list">
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (3).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Hotline
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        0946 806 159
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (2).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Email
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        info@maxproalu.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (1).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Địa chỉ
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        Số 1350/1 Quốc Lộ 1A, phường Thới An, quận 12, Tp. Hồ Chí Minh
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-ctrs">
+                                        <div class="footer-ctr">
+                                            <div class="footer-nav">
+                                                <p class="mb-20 c-white t16 fw-6">
+                                                    Sản phẩm
+                                                </p>
+                                                <ul class="menu-list">
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa mở quay</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa mở trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa xếp trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Mặt trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Mặt dựng</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Lan can</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">WE70</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer-sp">
+                                                <div class="footer-sp-box mb-40s">
+                                                    <p class="mb-20 c-white t16 fw-6">
+                                                        Công nghệ
+                                                    </p>
+                                                    <ul class="menu-list">
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Dây chuyền sản xuất</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Công nghệ xử lý bề mặt Anodize
+                                                                ED -
+                                                                Texguard </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="footer-sp-box mb-40s">
+                                                    <p class="mb-20 c-white t16 fw-6">
+                                                        Hỗ trợ khách hàng
+                                                    </p>
+                                                    <ul class="menu-list">
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Chính sách bảo hành</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Chính sách đổi trả</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Bảo mật & riêng tư</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="footer-sign">
+            <span class="t14 fw-6">
+                Thiết kế bởi
+            </span>
+            <span class="icon">
+                <img src="./assets/images/mona-sign.svg" alt="">
+            </span>
+        </a>
+    </footer>
+    <div class="back-to-top backToTop">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+    <script src="./js/library/jquery/jquery.js"></script>
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/library/aos/aos.js"></script>
+    <script src="./js/library/select2/select2.min.js"></script>
+    <script src="./js/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./js/library/jquery/jquery-migrate.js"></script>
+    <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./js/library/datetime/moment.min.js"></script>
+    <script src="./js/library/datetime/daterangepicker.min.js"></script>
+    <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./js/library/fancybox/fancybox.umd.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
