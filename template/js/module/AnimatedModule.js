@@ -15,9 +15,21 @@ export default function AnimatedModule() {
 
     function bindImageAnimations() {
         scrollAddClass(".scroll-item", "is-inview");
+        scrollAddClass(".txt-animated", "is-inview");
+        scrollAddClass(".load-img", "is-inview");
+        scrollAddClass(".load-img-third", "is-inview");
+        scrollAddClass(".load-img-second", "is-inview");
+
+
+
 
         $window.on("scroll", function () {
+            scrollAddClass(".txt-animated", "is-inview");
             scrollAddClass(".scroll-item", "is-inview");
+            scrollAddClass(".load-img", "is-inview");
+            scrollAddClass(".load-img-third", "is-inview");
+            scrollAddClass(".load-img-second", "is-inview");
+
         });
     }
     bindImageAnimations();
