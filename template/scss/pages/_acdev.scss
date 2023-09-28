@@ -835,6 +835,8 @@
         img {
             width: 100%;
         }
+
+        color: red;
     }
 
     &-content {
@@ -852,5 +854,114 @@
 
     &-des {
         font-size: 1.4rem;
+    }
+}
+
+.serc {
+    .head {
+        display: flex;
+        flex-direction: column;
+        max-width: 70rem;
+        gap: 1rem;
+        margin: 0 auto 4rem;
+    }
+
+    &-left {
+        width: 48rem;
+
+        @include max($res-mobile) {
+            width: 38rem;
+        }
+
+        @include max(800px) {
+            width: 28rem;
+        }
+
+        @include max(650px) {
+            width: 100%;
+        }
+
+        &-inner {
+            padding-right: 8rem;
+
+            @include max($res-mobile) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &-right {
+        flex: 1;
+
+        @include max(650px) {
+            width: 100%;
+            flex: unset;
+        }
+    }
+
+    &-img {
+        padding: 4rem 0;
+        position: relative;
+
+        &::before {
+            @include pseudo;
+            top: 0;
+            height: 100%;
+            right: 4rem;
+            left: calc((100vw - 120rem) / 2 * -1);
+            background-color: #f5f5f5;
+
+            @include max(1230px) {
+                left: -1.5rem;
+            }
+        }
+
+        .inner {
+            @include imgPd(581, 408);
+            box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.10);
+
+            img {
+                @include imgCover;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &:not(:last-child) {
+            padding-bottom: 2.4rem;
+            margin-bottom: 2.4rem;
+            border-bottom: .1rem solid #CBCCCD;
+        }
+    }
+
+    &-sub {
+        @include fz-20;
+        font-weight: 600;
+    }
+
+    &-name {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include fz-32;
+        font-weight: 600;
+
+        img {
+            height: 4.5rem;
+        }
+    }
+}
+
+
+
+.page-cncl {
+    .re-banner {
+        &-content {
+            max-width: 65rem;
+        }
     }
 }
