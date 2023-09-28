@@ -79,4 +79,16 @@ export default function AcdevModule() {
         effect: "slide",
         slidesPerView: "auto",
     });
+    functionSlider(".val-slider", {
+        speed: 1200,
+        autoplay: false,
+        // slidesPerGroup: 2,
+        initialSlide: 0,
+        centeredSlides: false,
+        loop: false,
+        spaceBetween: 0,
+        effect: "slide",
+        slidesPerView: "auto",
+    });
+
 }
