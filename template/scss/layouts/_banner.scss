@@ -113,9 +113,6 @@
         @include max(500px) {
           font-size: 1.6rem;
         }
-        @include hover {
-          color: $color-pri;
-        }
       }
     }
   }
