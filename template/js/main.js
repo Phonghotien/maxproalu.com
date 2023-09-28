@@ -14,6 +14,7 @@ import HeaderModule from "./module/HeaderModule.js";
 import PlusMinusModule from "./module/PlusMinusModule.js";
 import SideModule from "./module/SideModule.js";
 import ShowHideModule from "./module/ShowHideModule.js";
+import ShowPassWord from "./module/showPassWord.js";
 import CollapseModule from "./module/CollapseModule.js";
 import AnimatedModule from "./module/AnimatedModule.js";
 import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
@@ -21,6 +22,7 @@ import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import AcdevModule from "./module/AcdevModule.js";
+import hModule from "./module/hModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -55,4 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
   CollapseModule();
   ComponentModule();
   AcdevModule();
+  // hung toi choi bro
+  hModule();
+  ShowPassWord();
 });
