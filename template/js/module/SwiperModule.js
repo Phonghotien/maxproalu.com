@@ -158,9 +158,11 @@ export default function SwiperModule() {
         watchSlidesProgress: true,
         slideToClickedSlide: true,
         slidesPerView: "auto",
+        // autoHeight: true,
       });
       const itemMain = new Swiper(swiperMain, {
         speed: 1200,
+        autoHeight: true,
         slidesPerView: 1,
         loop: false,
         effect: "fade",

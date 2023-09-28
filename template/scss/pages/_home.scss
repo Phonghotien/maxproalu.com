@@ -2,6 +2,9 @@
   &-image {
     .inner {
       @include imgPd(750, 1728);
+      @include max(1200px) {
+        min-height: 60rem;
+      }
       img {
         @include imgCover;
       }
@@ -14,6 +17,7 @@
       overflow: unset;
       .swiper-slide {
         transition: 0.3s ease-in-out;
+        overflow: unset;
         &.swiper-slide-active {
           .prj-card-py {
             &::after {
@@ -31,21 +35,46 @@
     left: 2.5%;
     width: 50rem;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(0.8rem);
     z-index: 2;
+    @include max(1200px) {
+      position: static;
+      backdrop-filter: unset;
+      background: unset;
+      width: 100%;
+    }
     &-py {
       padding: 8% 10%;
       background: #f5f5f5;
       box-shadow: 0px 0.6rem 1.8rem 0px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(0.8rem);
+      @include max(1200px) {
+        padding: 2.4rem 1.5rem;
+        text-align: center;
+        box-shadow: unset;
+      }
     }
   }
   &-card {
     position: absolute;
-    left: 50%;
+    right: 25%;
     bottom: 18%;
     width: 44rem;
     transform: translate(50%, 50%);
+    @include max(1360px) {
+      right: 1.5rem;
+      transform: translate(0%, 50%);
+    }
+    @include max(1200px) {
+      top: 50%;
+      bottom: unset;
+      transform: translate(0, -50%);
+    }
+    @include max(500px) {
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 3rem);
+    }
     &-py {
       padding: 2.4rem;
       background: #f5f5f5;
@@ -60,7 +89,7 @@
         bottom: 0;
         right: 0;
         background: $color-pri;
-        transition: all 0.75s ease 1.25s;
+        transition: all 0.75s ease;
       }
     }
     &-img {
@@ -94,10 +123,19 @@
   }
   &-thumb {
     width: calc((7 / 12) * 100%);
+    @include max(1200px) {
+      width: 100%;
+    }
     .row {
       --gap: 3.6rem;
+      @include max(768px) {
+        --gap: 1.2rem;
+      }
       .col {
         width: calc(100% / 3);
+        @include max(600px) {
+          width: 100%;
+        }
       }
     }
     .swiper {
@@ -152,6 +190,11 @@
     @include flex;
     align-items: center;
     gap: 13rem;
+    @include max(768px) {
+      flex-direction: column;
+      gap: 2.4rem;
+      text-align: center;
+    }
     .t-title {
       flex-shrink: 0;
     }
@@ -169,7 +212,7 @@
     .swiper {
       width: 100%;
       .swiper-wrapper {
-        animation: rollmove 60s infinite alternate;
+        animation: rollmove 30s infinite alternate;
         animation-timing-function: cubic-bezier(1, 1, 1, 1);
         @include hover {
           animation-play-state: paused;
@@ -215,6 +258,11 @@
     @include flex;
     align-items: center;
     gap: 13rem;
+    @include max(768px) {
+      flex-direction: column;
+      gap: 2.4rem;
+      text-align: center;
+    }
     .t-title {
       flex-shrink: 0;
     }
@@ -224,6 +272,16 @@
   }
   &-row {
     justify-content: space-between;
+    .col {
+      @include max(600px) {
+        width: 100%;
+      }
+    }
+  }
+  &-iiner {
+    @include max(600px) {
+      text-align: center;
+    }
   }
   &-tnum {
     @include flex;
@@ -232,6 +290,9 @@
     font-weight: 600;
     color: $color-pri;
     gap: 1rem;
+    @include max(600px) {
+      justify-content: center;
+    }
     .t-num {
       display: inline-block;
       position: relative;
@@ -243,6 +304,9 @@
         right: 0;
         font-size: 2.8rem;
         color: inherit;
+        @include max(768px) {
+          transform: translate(50%, -50%);
+        }
       }
     }
   }
@@ -270,6 +334,13 @@
         rgba(0, 0, 0, 0.9) -20.23%,
         rgba(0, 0, 0, 0) 80.93%
       );
+      @include max(900px) {
+        background: linear-gradient(
+          163deg,
+          rgba(0, 0, 0, 0.9) -20.23%,
+          rgba(0, 0, 0, 0) 80.93%
+        );
+      }
     }
     .inner {
       height: 100%;
@@ -284,20 +355,39 @@
   &-row {
     justify-content: space-between;
     align-items: center;
+    @include max(900px) {
+      flex-direction: column;
+    }
+    .col {
+      @include max(900px) {
+        width: 100%;
+      }
+    }
   }
   &-logo {
     .custom-logo-link {
       width: 33rem;
       @include flex;
+      @include max(900px) {
+        margin: 0 auto;
+      }
     }
   }
   &-content {
+    @include max(900px) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
   }
   &-form {
     &-py {
       padding: 5rem;
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(0.8rem);
+      @include max(600px) {
+        padding: 2.4rem;
+      }
     }
   }
 }
@@ -326,6 +416,9 @@
 .sec-hprd {
   padding: 13rem 0;
   background: #f5f5f5;
+  @include max(1200px) {
+    padding: 4rem 0;
+  }
 }
 .hprd {
   &-wrap {
@@ -334,6 +427,15 @@
   &-image {
     &-inner {
       position: relative;
+      @include max(1200px) {
+        max-width: 50%;
+      }
+      @include max(800px) {
+        max-width: 85%;
+      }
+      @include max(600px) {
+        max-width: 100%;
+      }
     }
   }
   &-select {
@@ -351,6 +453,10 @@
     &.x3 {
       top: 92%;
       left: 50%;
+      @include max(800px) {
+        top: 84%;
+        left: 40%;
+      }
     }
     &.x4 {
       top: 35%;
@@ -398,6 +504,13 @@
         color: $color-pri;
         background: #fff;
         transition: 0.3s ease-in-out;
+        @include max(900px) {
+          padding: 1rem;
+        }
+        @include max(600px) {
+          font-size: 1.2rem;
+          padding: 0.6rem 0.4rem;
+        }
         @include hover {
           background: $color-pri;
           color: #fff;
@@ -405,15 +518,31 @@
       }
       &.pright {
         left: calc(100% + 5rem);
+        @include max(900px) {
+          left: calc(100% + 1rem);
+        }
+        @include max(800px) {
+          left: unset;
+          right: calc(100% + 1rem);
+        }
         .line {
           left: 0;
+          @include max(800px) {
+            left: 100%;
+          }
         }
       }
       &.pleft {
         right: calc(100% + 5rem);
+        @include max(900px) {
+          right: calc(100% + 1rem);
+        }
         .line {
           left: 100%;
           transform: translate(-50%, -50%) rotate(-25deg);
+          @include max(900px) {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
         }
       }
       .line {
@@ -424,6 +553,16 @@
         transform: translate(-50%, -50%) rotate(25deg);
         top: 50%;
         z-index: -1;
+        @include max(900px) {
+          width: 6rem;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        @include max(800px) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @include max(600px) {
+          width: 4rem;
+        }
       }
     }
   }
@@ -441,9 +580,27 @@
     font-weight: 700;
     color: $color-pri;
   }
+  &-row {
+    @include max(1200px) {
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: 2.4rem;
+    }
+  }
+  &-btn {
+    @include max(1200px) {
+      @include mid-flex;
+    }
+  }
   &-right {
     width: calc((5.2 / 12) * 100%);
     margin-left: auto;
+    @include max(1200px) {
+      width: 80rem;
+      margin: 0 auto;
+      max-width: 100%;
+      text-align: center;
+    }
   }
   &-image {
     position: absolute;
@@ -451,6 +608,15 @@
     width: 40%;
     transform: translateX(-30%);
     left: 0;
+    @include max(1480px) {
+      transform: translate(0%) scale(0.8);
+    }
+    @include max(1200px) {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      transform: unset;
+    }
     img {
       display: block;
       width: 100%;
@@ -462,6 +628,11 @@
     @include flex;
     align-items: center;
     gap: 13rem;
+    @include max(880px) {
+      flex-direction: column;
+      gap: 2.4rem;
+      text-align: center;
+    }
     .t-title {
       flex-shrink: 0;
     }
@@ -470,6 +641,9 @@
     width: calc(100vw - ((100vw - 1195px) / 2));
     max-width: 100%;
     margin-left: auto;
+    @include max(1200px) {
+      padding: 0 1.5rem;
+    }
   }
   &-slider {
     margin-top: 5rem;
@@ -502,6 +676,15 @@
         .swiper-slide {
           &.col {
             width: calc(100% / 5);
+            @include max(1200px) {
+              width: calc(100% / 4);
+            }
+            @include max(880px) {
+              width: calc(100% / 3);
+            }
+            @include max(640px) {
+              width: 50%;
+            }
           }
           @include hover {
             .t-link {
@@ -579,6 +762,9 @@
         .swiper-slide {
           &.col {
             width: max-content;
+            @include max(500px) {
+              width: 100%;
+            }
           }
           &.swiper-slide-thumb-active {
             color: $color-pri;
@@ -598,9 +784,7 @@
       padding-bottom: 1.8rem;
       position: relative;
       transition: 0.3s ease-in-out;
-      @include max(768px) {
-        font-size: 1.4rem;
-      }
+
       &::before {
         content: "";
         position: absolute;
@@ -661,10 +845,17 @@
       @include flex;
       gap: 5rem;
       margin-top: 2rem;
+      @include max(768px) {
+        flex-direction: column;
+      }
     }
     &-left {
       width: 10rem;
       flex-shrink: 0;
+      @include max(768px) {
+        width: 24rem;
+        margin: 0 auto;
+      }
     }
     &-right {
       flex: 1;
@@ -715,6 +906,9 @@
         gap: 5rem;
         row-gap: 1rem;
         list-style: disc;
+        @include max(768px) {
+          padding-left: 1.5rem;
+        }
       }
       li {
         width: calc(50% - 2.5rem);
@@ -728,21 +922,40 @@
 }
 .sec-hif {
   padding: 10rem 0;
+  @include max(768px) {
+    padding: 1.5rem 0;
+  }
 }
 .hif {
   &-flex {
     @include flex;
     margin: 0 -1.2rem;
     justify-content: space-between;
+    @include max(768px) {
+      flex-direction: column;
+      row-gap: 2.4rem;
+    }
   }
   &-left {
     width: calc((4.2 / 12) * 100%);
     padding: 0 1.2rem;
+    @include max(1200px) {
+      width: 40%;
+    }
+    @include max(768px) {
+      width: 46rem;
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
   &-right {
     width: calc((7.2 / 12) * 100%);
     padding: 0 1.2rem;
+    @include max(768px) {
+      width: 100%;
+    }
   }
+
   &-image {
     .inner {
       @include imgPd(516, 408);
@@ -756,6 +969,10 @@
       @include flex;
       justify-content: space-between;
       gap: 1rem;
+      flex-wrap: wrap;
+    }
+    &-bot {
+      margin-top: 3rem;
     }
   }
 }
