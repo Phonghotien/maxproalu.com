@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/backdoor.css">
+    <link rel="icon" type="image/png" href="./assets/images/mona.png" />
+    <title>Dự án chi tiết</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-gr">
+                    <a href="" class="btn">
+                        <span class="text">
+                            Tải tài liệu
+                        </span>
+                        <span class="icon">
+                            <i class="fa-light fa-down-to-bracket"></i>
+                        </span>
+                    </a>
+                    <div class="header-user">
+                        <a href="" class="header-user-link">
+                            <span class="icon">
+                                <i class="fa-light fa-user"></i>
+                            </span>
+                            <span class="t-link">
+                                Đăng nhập/Đăng ký
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header-lang">
+                        <div class="header-lang-gr">
+                            <span class="icon-flag">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </span>
+                            <span class="text">
+                                VN
+                            </span>
+                            <span class="icon">
+                                <img src="./assets/images/arrow_down.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bot">
+            <div class="container">
+                <div class="header-wrap">
+                    <div class="header-burger">
+                        <div class="hamburger" id="hamburger">
+                            <label for="menu_checkbox" class="hamburger-label">
+                                <div class="hamburger-text"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="header-logo">
+                        <a href="" class="custom-logo-link">
+                            <img src="./assets/images/logo-second.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header-nav">
+                        <div class="menu-nav">
+                            <!-- Cấu trúc html menu -->
+                            <ul class="menu-list">
+                                <li class="menu-item current-menu-item">
+                                    <a href="" class="menu-link">
+                                        Giới thiệu
+                                    </a>
+                                </li>
+                                <li class="menu-item dropdown">
+                                    <a href="" class="menu-link">
+                                        Sản phẩm
+                                    </a>
+                                    <ul class="menu-list">
+                                        <li class="menu-item">
+                                            <a href="" class="menu-link">
+                                                Demo
+                                            </a>
+                                        </li>
+                                        <li class="menu-item dropdown">
+                                            <a href="" class="menu-link">
+                                                Demo
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Công nghệ
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Dự án
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-link">
+                                        Phân phối
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-overlay"></div>
+        <div class="mobile">
+            <div class="mobile-con">
+                <div class="mobile-wr">
+                    <div class="mobile-lang">
+                        <span class="text">Ngôn ngữ</span>
+                        <div class="mobile-lang-list">
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                            <a href="" class="mobile-lang-item">
+                                <img src="./assets/images/Vietnam.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav">
+                        <div class="menu-nav menu-have-icon">
+                            <ul id="menu-menu-header-main-mobile" class="menu-list">
+                                <li class="menu-item parent fz16 fw6 current-menu-item">
+                                    <a class="menu-link" href="">Trang chủ</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6 dropdown">
+                                    <a class="menu-link" href="">Giới thiệu</a>
+                                    <ul class="menu-list">
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 1 </a>
+                                        </li>
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 2
+                                            </a>
+                                        </li>
+                                        <li class="menu-item parent fz16 fw6 menu-item">
+                                            <a class="menu-link" href="">Submenu 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Sản phẩm</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Công nghệ</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Dự án</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Tin tức</a>
+                                </li>
+                                <li class="menu-item parent fz16 fw6">
+                                    <a class="menu-link" href="">Phân phối</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-if">
+                        <div class="mobile-if-list">
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (1).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Địa chỉ: </span>Số 1350/1 Quốc Lộ 1A, phường Thới An, quận
+                                        12, Tp. Hồ Chí Minh
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (3).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Số điện thoại: </span>0946 806 159
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mobile-if-item">
+                                <div class="mobile-if-gr">
+                                    <span class="icon">
+                                        <img src="./assets/images/icon-mb (2).svg" alt="">
+                                    </span>
+                                    <p class="text">
+                                        <span class="fw-7">Email:</span>info@maxproalu.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-mxh">
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (1).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (2).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (3).svg" alt="">
+                </a>
+                <a target="_blank" href="" class="mobile-mxh-link">
+                    <img src="./assets/images/icon-mb-social (4).svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main page-prj-detail">
+        <section class="sec-re-banner">
+            <div class="re-banner">
+                <div class="re-banner-img">
+                    <img src="./assets/img/banner-prjct.jpg" alt="">
+                </div>
+                <div class="re-banner-wrapper">
+                    <div class="re-banner-content">
+                        <div class="breadcrumb">
+                            <ul class="breadcrumb-list">
+                                <li class="breadcrumb-item" data-aos="fade-right">
+                                    <a href="" class="breadcrumb-link">
+                                        Trang chủ
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item" data-aos="fade-right">
+                                    <a href="" class="breadcrumb-link">
+                                        Biệt thự tư nhân Mona
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="re-banner-title txt-over">
+                            <span data-aos="fade-right">Biệt thự tư nhân Mona</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-bts">
+            <div class="bts ss-pd">
+                <div class="container">
+                    <div class="head t-center">
+                        <h2 class="t-title">
+                            Kỳ quan villa - Nghệ thuật kết hợp hiện đại và sang trọng
+                        </h2>
+                        <p class="des">
+                            Trong thế giới kiến trúc và xây dựng ngày nay, việc sử dụng vật liệu cao cấp và công nghệ
+                            tiên
+                            tiến là một yếu tố quan
+                            trọng để tạo ra những kiệt tác đẹp mắt và tiện ích. Dự án Kỳ Quan Villa đã trở thành biểu
+                            tượng
+                            cho sự hài hòa giữa
+                            phong cách villa nghỉ dưỡng hiện đại và sự sang trọng của nhôm MAXPRO.JP.
+                        </p>
+                    </div>
+                    <div class="bts-main">
+                        <div class="bts-side row">
+                            <div class="bts-left col col-6">
+                                <div class="bts-left-inner">
+                                    <div class="bts-img">
+                                        <img src="./assets/img/bts-house.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bts-right col col-6">
+                                <div class="bts-content">
+                                    <div class="bts-content-top">
+                                        <h3 class="t-title">
+                                            Biệt thự tư nhân Mona
+                                        </h3>
+                                        <p class="des">
+                                            Với diện tích lớn 200m2, thiết kế tinh tế và sử dụng thông minh của vật liệu
+                                            nhôm, dự án đã gây ấn tượng mạnh mẽ.
+                                        </p>
+                                    </div>
+                                    <div class="bts-list row">
+                                        <div class="bts-item col col-6">
+                                            <img src="./assets/img/bts-icon-1.svg" alt="">
+                                            <p class="title">
+                                                Diện tích
+                                            </p>
+                                            <p class="des">
+                                                200m2
+                                            </p>
+                                        </div>
+                                        <div class="bts-item col col-6">
+                                            <img src="./assets/img/bts-icon-2.svg" alt="">
+                                            <p class="title">
+                                                Phong cách
+                                            </p>
+                                            <p class="des">
+                                                Villa nghỉ dưỡng hiện đại
+                                            </p>
+                                        </div>
+                                        <div class="bts-item col col-6">
+                                            <img src="./assets/img/bts-icon-3.svg" alt="">
+                                            <p class="title">
+                                                Màu sắc cửa
+                                            </p>
+                                            <p class="des">
+                                                Champagne
+                                            </p>
+                                        </div>
+                                        <div class="bts-item col col-6">
+                                            <img src="./assets/img/bts-icon-4.svg" alt="">
+                                            <p class="title">
+                                                Thời gian hoàn thiện
+                                            </p>
+                                            <p class="des">
+                                                12 tháng
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-qts">
+            <div class="qts ss-pd-b">
+                <div class="container">
+                    <div class="qts-side row">
+                        <div class="qts-left col col-5">
+                            <h2 class="t-title">
+                                Quy trình hoàn thiện
+                            </h2>
+                            <p class="des">
+                                Dự án Kỳ Quan Villa đã trải qua một quá trình hoàn thiện tỉ mỉ và đầy kỷ luật.
+                            </p>
+                        </div>
+                        <div class="qts-right col col-7">
+                            <div class="qts-list row">
+                                <div class="qts-item col col-3">
+                                    <div class="qts-wrap">
+                                        <div class="qts-box">
+                                            <div class="inner">
+                                                <img src="./assets/img/qts-tru-11.svg" alt="">
+                                                <img src="./assets/img/qts-tru-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="qts-content">
+                                            <h3 class="qts-name">
+                                                Thiết kế kiến trúc
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qts-item col col-3">
+                                    <div class="qts-wrap">
+                                        <div class="qts-box">
+                                            <div class="inner">
+                                                <img src="./assets/img/qts-tru-22.svg" alt="">
+                                                <img src="./assets/img/qts-tru-2.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="qts-content">
+                                            <h3 class="qts-name">
+                                                Xây dựng phần thô
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qts-item col col-3">
+                                    <div class="qts-wrap">
+                                        <div class="qts-box">
+                                            <div class="inner">
+                                                <img src="./assets/img/qts-tru-33.svg" alt="">
+                                                <img src="./assets/img/qts-tru-3.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="qts-content">
+                                            <h3 class="qts-name">
+                                                Chọn vật liệu và giải pháp cửa
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qts-item col col-3">
+                                    <div class="qts-wrap">
+                                        <div class="qts-box">
+                                            <div class="inner">
+                                                <img src="./assets/img/qts-tru-44.svg" alt="">
+                                                <img src="./assets/img/qts-tru-4.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="qts-content">
+                                            <h3 class="qts-name">
+                                                Hoàn thiện nội thất
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-matel">
+            <div class="matel">
+                <div class="container">
+                    <div class="head t-center">
+                        <div class="matel-logo">
+                            <img src="./assets/images/logo-second.png" alt="">
+                        </div>
+                        <h2 class="t-title">
+                            Vật liệu và giải pháp cửa
+                        </h2>
+                    </div>
+                </div>
+                <div class="matel-slider gallery">
+                    <div class="swiper-container">
+                        <div class="swiper row">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide col col-4">
+                                    <div class="matel-wrap">
+                                        <div class="matel-img gItem" data-src="./assets/img/matel-img-1.jpg">
+                                            <img src="./assets/img/matel-img-1.jpg" alt="">
+                                            <div class="matel-ctr">
+                                                <img src="./assets/img/certi-icon-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="matel-content">
+                                            <p class="matel-number" data-number="01">
+                                                01
+                                            </p>
+                                            <div class="matel-content-inner">
+                                                <h3 class="matel-name">
+                                                    Cửa mở quay hệ 65
+                                                </h3>
+                                                <p class="matel-des">
+                                                    Cửa lùa tiện dụng với vật liệu nhôm chắc chắn và đa năng, khung
+                                                    cửa lớn lấy sáng
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide col col-4">
+                                    <div class="matel-wrap">
+                                        <div class="matel-img gItem" data-src="./assets/img/matel-img-2.jpg">
+                                            <img src="./assets/img/matel-img-2.jpg" alt="">
+                                            <div class="matel-ctr">
+                                                <img src="./assets/img/certi-icon-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="matel-content">
+                                            <p class="matel-number" data-number="01">
+                                                02
+                                            </p>
+                                            <div class="matel-content-inner">
+                                                <h3 class="matel-name">
+                                                    Cửa lùa hệ 115
+                                                </h3>
+                                                <p class="matel-des">
+                                                    Cửa lùa tiện dụng với vật liệu nhôm chắc chắn và đa năng, khung
+                                                    cửa lớn lấy sáng
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide col col-4">
+                                    <div class="matel-wrap">
+                                        <div class="matel-img gItem" data-src="./assets/img/matel-img-3.jpg">
+                                            <img src="./assets/img/matel-img-3.jpg" alt="">
+                                            <div class="matel-ctr">
+                                                <img src="./assets/img/certi-icon-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="matel-content">
+                                            <p class="matel-number" data-number="01">
+                                                03
+                                            </p>
+                                            <div class="matel-content-inner">
+                                                <h3 class="matel-name">
+                                                    Màu sắc nhôm champagne
+                                                </h3>
+                                                <p class="matel-des">
+                                                    Cửa lùa tiện dụng với vật liệu nhôm chắc chắn và đa năng, khung
+                                                    cửa lớn lấy sáng
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="matel-pagi pagi-custom">
+                        <p class="current">01</p>
+                        <div class="swiper-pagination"></div>
+                        <p class="total">08</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="medi ss-pd-t">
+            <div class="medi-slider">
+                <div class="swiper-container">
+                    <div class="swiper row">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide col">
+                                <div class="medi-img">
+                                    <img src="./assets/img/medi-img-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide col">
+                                <div class="medi-img">
+                                    <img src="./assets/img/medi-img-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide col">
+                                <div class="medi-img">
+                                    <img src="./assets/img/medi-img-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide col">
+                                <div class="medi-img">
+                                    <img src="./assets/img/medi-img-4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide col">
+                                <div class="medi-img">
+                                    <img src="./assets/img/medi-img-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medi-pagi pagi-custom">
+                    <p class="current">01</p>
+                    <div class="swiper-pagination"></div>
+                    <p class="total">08</p>
+                </div>
+            </div>
+        </div>
+        <section class="sec-bls">
+            <div class="bls ss-pd-t">
+                <div class="container">
+                    <div class="bls-side row">
+                        <div class="bls-left col">
+                            <div class="bls-content">
+                                <div class="bls-quote">
+                                    <img src="./assets/img/bls-quote.svg" alt="">
+                                </div>
+                                <div class="bls-top">
+                                    <div class="bls-ava">
+                                        <img src="./assets/img/banner-about.jpg" alt="">
+                                    </div>
+                                    <div class="bls-top-content">
+                                        <div class="bls-name">
+                                            Anh Tuấn
+                                        </div>
+                                        <p class="bls-level">
+                                            Dự án Kỳ Quan Villa
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="bls-des">
+                                    Sự kết hợp tuyệt vời giữa sự sang trọng và hiện đại của cửa nhôm MAXPRO.JP trong dự
+                                    án Kỳ Quan Villa đã khiến tôi vô
+                                    cùng ấn tượng và hài lòng. Nhìn lại hành trình từ khâu thiết kế đến hoàn thiện, tôi
+                                    không khỏi bất ngờ trước sự chất
+                                    lượng và độ bền mà nhôm MAXPRO.JP mang lại. Việc tạo nên không gian sống tiện nghi
+                                    và đẳng cấp dựa trên một vật liệu như
+                                    thế này thực sự tinh tế. Tôi thật sự hạnh phúc và tự hào về sự lựa chọn này, và chắc
+                                    chắn sẽ không ngần ngại giới thiệu
+                                    cho mọi người về chất lượng tuyệt vời của nhôm MAXPRO.JP.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bls-right col">
+                            <div class="bls-img">
+                                <div class="inner">
+                                    <img src="./assets/img/bls-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-py">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="footer-row row">
+                        <div class="col col-3">
+                            <div class="footer-info">
+                                <div class="footer-logo">
+                                    <a href="" class="custom-logo-link">
+                                        <img src="./assets/images/logo-ft.png" alt="">
+                                    </a>
+                                    <p class="fw-6 c-white">
+                                        Công ty TNHH XNK Trung Chính
+                                    </p>
+                                </div>
+                                <div class="footer-info-list">
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (1).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (2).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (3).png" alt="">
+                                    </a>
+                                    <a href="" class="link">
+                                        <img src="./assets/images/ft-icon (4).png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-8">
+                            <div class="footer-block">
+                                <div class="footer-ctn">
+                                    <div class="footer-sc">
+                                        <div class="footer-sc-list">
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (3).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Hotline
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        0946 806 159
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (2).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Email
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        info@maxproalu.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="footer-sc-item">
+                                                <span class="icon">
+                                                    <img src="./assets/images/icon-mb (1).svg" alt="">
+                                                </span>
+                                                <div class="igr t14">
+                                                    <p class="c-white fw-6">
+                                                        Địa chỉ
+                                                    </p>
+                                                    <a href="" class="t-link">
+                                                        Số 1350/1 Quốc Lộ 1A, phường Thới An, quận 12, Tp. Hồ Chí Minh
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer-ctrs">
+                                        <div class="footer-ctr">
+                                            <div class="footer-nav">
+                                                <p class="mb-20 c-white t16 fw-6">
+                                                    Sản phẩm
+                                                </p>
+                                                <ul class="menu-list">
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa mở quay</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa mở trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Cửa xếp trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Mặt trượt</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Mặt dựng</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">Lan can</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="" class="menu-link">WE70</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer-sp">
+                                                <div class="footer-sp-box mb-40s">
+                                                    <p class="mb-20 c-white t16 fw-6">
+                                                        Công nghệ
+                                                    </p>
+                                                    <ul class="menu-list">
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Dây chuyền sản xuất</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Công nghệ xử lý bề mặt Anodize
+                                                                ED -
+                                                                Texguard </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="footer-sp-box mb-40s">
+                                                    <p class="mb-20 c-white t16 fw-6">
+                                                        Hỗ trợ khách hàng
+                                                    </p>
+                                                    <ul class="menu-list">
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Chính sách bảo hành</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Chính sách đổi trả</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="" class="menu-link">Bảo mật & riêng tư</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="footer-sign">
+            <span class="t14 fw-6">
+                Thiết kế bởi
+            </span>
+            <span class="icon">
+                <img src="./assets/images/mona-sign.svg" alt="">
+            </span>
+        </a>
+    </footer>
+    <div class="back-to-top backToTop">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+
+    <script src="./js/library/jquery/jquery.js"></script>
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/library/aos/aos.js"></script>
+    <script src="./js/library/select2/select2.min.js"></script>
+    <script src="./js/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./js/library/jquery/jquery-migrate.js"></script>
+    <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./js/library/datetime/moment.min.js"></script>
+    <script src="./js/library/datetime/daterangepicker.min.js"></script>
+    <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./js/library/fancybox/fancybox.umd.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
