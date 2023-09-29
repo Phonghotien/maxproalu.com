@@ -1,6 +1,7 @@
 export default function TabModule() {
 
     let tab = document.querySelectorAll('.tabJS');
+
     if (tab) {
         tab.forEach((t) => {
             let tBtn = t.querySelectorAll('.tabBtn');
