@@ -101,6 +101,50 @@ export default function AcdevModule() {
         effect: "slide",
         slidesPerView: "auto",
     });
+    functionSlider(".matel", {
+        speed: 1200,
+        autoplay: false,
+        // slidesPerGroup: 2,
+        initialSlide: 0,
+        centeredSlides: false,
+        loop: false,
+        spaceBetween: 0,
+        effect: "slide",
+        slidesPerView: "auto",
+        on: {
+            init: function (e) {
+                const slides = document.querySelectorAll('.matel-slider .swiper-slide')
+                const totals = document.querySelector('.matel-pagi .total');
+                totals.innerHTML = `${slides.length < 10 ? "0" + slides.length : slides.length}`
+            },
+            slideChange: function (e) {
+                const current = document.querySelector('.matel-pagi .current');
+                current.innerHTML = `${(e.realIndex + 1) < 10 ? "0" + (e.realIndex + 1) : (e.realIndex + 1)}`
+            },
+        },
+    }, "progressbar");
+    functionSlider(".medi", {
+        speed: 1200,
+        autoplay: false,
+        // slidesPerGroup: 2,
+        initialSlide: 0,
+        centeredSlides: false,
+        loop: false,
+        spaceBetween: 0,
+        effect: "slide",
+        slidesPerView: "auto",
+        on: {
+            init: function (e) {
+                const slides = document.querySelectorAll('.medi-slider .swiper-slide')
+                const totals = document.querySelector('.medi-pagi .total');
+                totals.innerHTML = `${slides.length < 10 ? "0" + slides.length : slides.length}`
+            },
+            slideChange: function (e) {
+                const current = document.querySelector('.medi-pagi .current');
+                current.innerHTML = `${(e.realIndex + 1) < 10 ? "0" + (e.realIndex + 1) : (e.realIndex + 1)}`
+            },
+        },
+    }, "progressbar");
     functionSlider(".ext", {
         speed: 1200,
         autoplay: false,
