@@ -979,8 +979,149 @@
 }
 .sec-secur {
   padding: 10rem 0;
+  &.fix {
+    padding: unset;
+  }
+  @include max(1200px) {
+    padding: 4rem 0;
+  }
 }
 .secur {
   &-row {
+    @include max(980px) {
+      flex-direction: column-reverse;
+    }
+    .col {
+      @include max(980px) {
+        width: 100%;
+      }
+    }
+  }
+  &-content {
+    &.fix {
+      margin-top: 3.5rem;
+      padding: 0 2.4rem;
+      padding-bottom: 8.6rem;
+      position: relative;
+      color: #757575;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 90%;
+        background: #f5f5f5;
+        z-index: -1;
+      }
+      .igr {
+        align-items: center;
+        .iquote {
+        }
+        .iquote-inner {
+          position: relative;
+          padding-left: 2rem;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -0.4rem;
+            left: 0%;
+            transform: translateX(-50%);
+            width: 3.4rem;
+            height: 3.4rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../assets/images/quote-icon.svg);
+          }
+        }
+      }
+    }
+  }
+  &-cate {
+    &-py {
+      padding: 2.4rem;
+      background: #f5f5f5;
+      .text {
+        @include fz-20;
+        color: $color-pri;
+        font-weight: 600;
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid #e0e0e0;
+      }
+    }
+    &-list {
+      padding-top: 2rem;
+      @include flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    &-item {
+      @include flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      @include hover {
+        .icon,
+        .t-text {
+          color: $color-pri;
+        }
+      }
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        @include mid-flex;
+        color: #343c44;
+        transition: 0.3s ease-in-out;
+      }
+      .t-text {
+        color: #343c44;
+        transition: 0.3s ease-in-out;
+      }
+      &.active {
+        .t-text {
+          color: $color-pri;
+          font-weight: 600;
+        }
+        .icon {
+          color: $color-pri;
+        }
+      }
+    }
+  }
+  &-bot {
+    margin-top: 3.8rem;
+    &-gr {
+      @include flex;
+      align-items: center;
+      gap: 6rem;
+      @include max(768px) {
+        gap: 2.4rem;
+      }
+    }
+    &-line {
+      flex: 1;
+      height: 0.1rem;
+      background: #cccccc;
+    }
+    &-scs {
+      @include flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 1rem;
+    }
+    &-sc {
+      @include flex;
+      align-items: center;
+      gap: 0.6rem;
+      .i-link {
+        @include mid-flex;
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: 0.3s ease-in-out;
+        @include hover {
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 }
