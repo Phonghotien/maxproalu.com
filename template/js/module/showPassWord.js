@@ -24,12 +24,35 @@ export default function ShowPassWord() {
       const fileInput = document.getElementById("file-input");
     
       if (uploadButton && fileInput) {
-        uploadButton.addEventListener("click", (e) => {
+        uploadButton.addEventListener("click", () => {
           e.preventDefault();
           fileInput.click();
         });
     
       }
+
+
+      
+  // slide section scontact
+  const faq_btn = document.querySelectorAll(".scontact-item");
+  if (faq_btn) {
+    faq_btn.forEach(function (btn) {
+      $(btn).on("click", function () {
+        const isOpen = $(this).hasClass("open");
+        if (!isOpen) {
+          $(".scontact-item.open").find(".scontact-desc-slide").slideUp(400);
+          $(".scontact-item.open").removeClass("open");
+          $(this).find(".scontact-desc-slide").slideToggle(400);
+          $(this).toggleClass("open");
+    
+        }else {
+          $(this).addClass("open");
+        }
+  
+      });
+    
+    });
+  }
  
 }
 
