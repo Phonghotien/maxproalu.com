@@ -158,6 +158,57 @@ export default function SwiperModule() {
         watchSlidesProgress: true,
         slideToClickedSlide: true,
         slidesPerView: "auto",
+        // autoHeight: true,
+      });
+      const itemMain = new Swiper(swiperMain, {
+        speed: 1200,
+        autoHeight: true,
+        slidesPerView: 1,
+        loop: false,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        thumbs: {
+          swiper: itemText,
+        },
+      });
+      // itemText.controller.control = itemMain;
+      // itemMain.controller.control = itemText;
+    });
+  }
+  const hbn_silder = document.querySelectorAll(".bnh-slider");
+  if (hbn_silder) {
+    hbn_silder.forEach((item, i) => {
+      const swiperMain = item.querySelector(".bnh-sw-main .swiper");
+      const swiperThumb = item.querySelector(".bnh-thumb-sw .swiper");
+      const slideThumb = item.querySelectorAll(".bnh-thumb-sw .swiper-slide");
+      const slideMain = item.querySelectorAll(".bnh-sw-main .swiper-slide");
+      let autoPlayDelay = 3500;
+
+      const itemText = new Swiper(swiperThumb, {
+        speed: 1200,
+        loop: false,
+        slidesPerView: "auto",
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".bnh-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '"> <span class="pagi-num">' +
+              (index < 9 ? 0 : "") +
+              "" +
+              (index + 1) +
+              '</span><span class="pagi-pro"></span></span>'
+            );
+          },
+        },
       });
       const itemMain = new Swiper(swiperMain, {
         speed: 1200,
@@ -171,8 +222,6 @@ export default function SwiperModule() {
           swiper: itemText,
         },
       });
-      // itemText.controller.control = itemMain;
-      // itemMain.controller.control = itemText;
     });
   }
 }
