@@ -74,6 +74,38 @@ export default function SwiperModule() {
     effect: "fade",
     slidesPerView: "auto",
   });
+  const prodt_silder = document.querySelectorAll(".prddt-slider");
+
+  if (prodt_silder) {
+    prodt_silder.forEach((item, i) => {
+      const swiperMain = item.querySelector(".mp-gallery-slider-main .swiper");
+      const swiperThumb = item.querySelector(".mp-gallery-thumbs .swiper");
+
+      const itemImg = new Swiper(swiperThumb, {
+        speed: 1200,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+      });
+      //
+      const itemMain = new Swiper(swiperMain, {
+        speed: 1200,
+        slidesPerView: 1,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        grabCursor: true,
+        navigation: {
+          nextEl: ".prddt-slider .swiper-next",
+          prevEl: ".prddt-slider .swiper-prev",
+        },
+        thumbs: {
+          swiper: itemImg,
+        },
+      });
+    });
+    //
+  }
   // functionSlider(".bnh-sw", {
   //   speed: 1200,
   //   // autoplay: {
@@ -225,22 +257,28 @@ export default function SwiperModule() {
     });
   }
 
-  let slideCurrent = document.querySelector('.swiper-gen .pagin-current');
-  functionSlider(".swiper-gen",  {
-    speed: 1200,
-    autoplay: true,
-    // slidesPerGroup: 2,
-    initialSlide: 0,
-    centeredSlides: false,
-    loop: false,
-    spaceBetween: 0,
-    slidesPerView: "auto",
+  let slideCurrent = document.querySelector(".swiper-gen .pagin-current");
+  functionSlider(
+    ".swiper-gen",
+    {
+      speed: 1200,
+      autoplay: true,
+      // slidesPerGroup: 2,
+      initialSlide: 0,
+      centeredSlides: false,
+      loop: false,
+      spaceBetween: 0,
+      slidesPerView: "auto",
 
-    on: {
-      slideChange: function (sw) {
-        slideCurrent.innerHTML = (this.activeIndex  < 9 ? `0${this.activeIndex + 1}` : this.activeIndex + 1);
-      }
-  },
-
-  }, 'progressbar')
+      on: {
+        slideChange: function (sw) {
+          slideCurrent.innerHTML =
+            this.activeIndex < 9
+              ? `0${this.activeIndex + 1}`
+              : this.activeIndex + 1;
+        },
+      },
+    },
+    "progressbar"
+  );
 }

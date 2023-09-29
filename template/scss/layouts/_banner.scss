@@ -62,11 +62,6 @@
     .swiper {
       .swiper-slide {
         &.swiper-slide-thumb-active {
-          .bnh-ctn-gr .t-link {
-            opacity: 1;
-            -webkit-transform: none;
-            transform: none;
-          }
           .bnh-btn {
             opacity: 1;
             -webkit-transform: none;
@@ -93,13 +88,11 @@
         @include fz-40;
         font-weight: 700;
         color: #fff;
+        display: block;
         transition: 0.3s ease-in-out;
-        transition-timing-function: ease;
-        transition-duration: 1.2s;
-        opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-        transition-property: color, opacity, transform, -webkit-transform;
+        @include hover {
+          color: $color-pri;
+        }
         @include max(1300px) {
           font-size: 3rem;
         }
